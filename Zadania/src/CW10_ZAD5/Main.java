@@ -2,6 +2,8 @@ package CW10_ZAD5;
 
 import java.io.*;
 
+import java.net.URL;
+
 public class Main {
     public static void main(String[] args) throws IOException {
 
@@ -13,7 +15,9 @@ public class Main {
 
         numerKonta = reader.readLine();
 
-        BufferedReader reader2 = new BufferedReader(new FileReader("src/CW10_ZAD5/plewibnra.txt"));
+        URL url = new URL("https://ewib.nbp.pl/plewibnra?dokNazwa=plewibnra.txt");
+
+        BufferedReader reader2 = new BufferedReader(new InputStreamReader(url.openStream()));
 
         do {
             String line = reader2.readLine();
